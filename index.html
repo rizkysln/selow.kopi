@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +12,7 @@
       padding: 0;
       box-sizing: border-box;
     }
-    
+
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
@@ -42,10 +43,25 @@
     }
 
     @keyframes float {
-      0%, 100% { transform: translateY(0) translateX(0); opacity: 0; }
-      10% { opacity: 1; }
-      90% { opacity: 1; }
-      100% { transform: translateY(-100vh) translateX(100px); opacity: 0; }
+
+      0%,
+      100% {
+        transform: translateY(0) translateX(0);
+        opacity: 0;
+      }
+
+      10% {
+        opacity: 1;
+      }
+
+      90% {
+        opacity: 1;
+      }
+
+      100% {
+        transform: translateY(-100vh) translateX(100px);
+        opacity: 0;
+      }
     }
 
     /* Navigation Bar */
@@ -91,6 +107,7 @@
 
     nav ul li a:hover {
       color: #00ffd5;
+      text-shadow: 0 0 8px rgba(0, 255, 213, 0.7);
     }
 
     /* Mobile Menu Toggle */
@@ -130,15 +147,20 @@
       margin-bottom: 20px;
       animation: fadeInDown 1s;
       box-shadow: 0 0 30px rgba(0, 255, 213, 0.4);
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 60px;
-      color: #fff;
       margin-left: auto;
       margin-right: auto;
+      overflow: hidden;
+      /* penting supaya gambar ikut bulat */
     }
+
+    /* Styling untuk gambar */
+    .profile-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      /* biar proporsional */
+    }
+
 
     header h1 {
       font-size: 48px;
@@ -375,7 +397,9 @@
 
     .contact-item a:hover {
       color: #00ffd5;
+      text-shadow: 0 0 8px rgba(0, 255, 213, 0.7);
     }
+
 
     /* Footer */
     footer {
@@ -423,24 +447,52 @@
 
     /* Animations */
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-30px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     .highlight {
       color: #00ffd5;
       font-weight: bold;
+      text-decoration: none;
     }
+
+    .highlight:hover {
+      color: #00ffd5;
+      text-shadow: 0 0 8px rgba(0, 255, 213, 0.7);
+    }
+
 
     /* Responsive Design */
     @media (max-width: 768px) {
@@ -463,6 +515,17 @@
       .menu-toggle {
         display: flex;
       }
+
+      .menu-toggle:hover {
+        color: #00ffd5;
+        text-shadow: 0 0 8px rgba(0, 255, 213, 0.7);
+      }
+
+      .navMenu:hover {
+        color: #00ffd5;
+        text-shadow: 0 0 8px rgba(0, 255, 213, 0.7);
+      }
+
 
       header h1 {
         font-size: 36px;
@@ -498,6 +561,7 @@
     }
   </style>
 </head>
+
 <body>
   <!-- Animated Background Particles -->
   <div class="particles" id="particles"></div>
@@ -525,20 +589,21 @@
     <!-- Header -->
     <header>
       <div class="profile-img">
-        <i class="fas fa-user"></i>
+        <img src="Foto.jpg" alt="Foto Rizky">
       </div>
       <h1>Halo, Saya Rizkysln 👋</h1>
       <p class="tagline">Lulusan Teknologi Informasi | IoT Enthusiast | Tech Explorer</p>
       <p class="subtitle">
         Passionate about technology, innovation, and creating solutions for tomorrow
       </p>
-      
+
       <!-- Social Links -->
       <div class="social-links">
-        <a href="https://solin.site" target="_blank" title="Website"><i class="fas fa-globe"></i></a>
-        <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
-        <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-        <a href="#" title="Email"><i class="fas fa-envelope"></i></a>
+        <a href="https://instagram.com/rizkysln_" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://github.com/Rizkysln" title="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://wa.me/6281278623036" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="mailto:rizkysln@gmail.com?subject=Halo%20Rizky&body=Saya%20tertarik%20dengan%20website%20Anda"
+          title="Email"><i class="fas fa-envelope"></i></a>
       </div>
     </header>
 
@@ -547,10 +612,20 @@
       <div class="card">
         <h2><i class="fas fa-user-circle"></i> Tentang Saya</h2>
         <p>
-          Saya adalah lulusan <span class="highlight">Universitas Labuhanbatu</span>,
-          Program Studi <span class="highlight">Teknologi Informasi</span>,
-          Fakultas <span class="highlight">Sains dan Teknologi</span>.
+          Saya adalah lulusan
+          <a href="https://ulb.ac.id" class="highlight">
+            Universitas Labuhanbatu
+          </a>,
+          Program Studi
+          <a href="https://fst.ulb.ac.id/profil-prodi-teknologi-informasi-fst-ulb/" class="highlight">
+            Teknologi Informasi
+          </a>,
+          Fakultas
+          <a href="https://fst.ulb.ac.id" class="highlight">
+            Sains dan Teknologi
+          </a>.
         </p>
+
         <p>
           Memiliki minat besar di bidang teknologi, khususnya pengembangan sistem,
           server, cloud computing, dan Internet of Things (IoT). Saya percaya bahwa
@@ -635,19 +710,25 @@
         <h2><i class="fas fa-envelope"></i> Hubungi Saya</h2>
         <div class="contact-info">
           <div class="contact-item">
-            <i class="fas fa-globe"></i>
-            <h3>Website</h3>
-            <a href="https://solin.site" target="_blank">solin.site</a>
+            <a href="https://instagram.com/rizkysln_">
+              <i class="fab fa-instagram"></i>
+              <h3>Instagram</h3>
+              @rizkysln_
+            </a>
           </div>
           <div class="contact-item">
-            <i class="fas fa-envelope"></i>
-            <h3>Email</h3>
-            <a href="mailto:contact@solin.site">contact@solin.site</a>
+            <a href="mailto:rizkysln@gmail.com?subject=Halo%20Rizky&body=Saya%20tertarik%20dengan%20website%20Anda">
+              <i class="fas fa-envelope"></i>
+              <h3>Email</h3>
+              rizkysolin06@gmail.com
+            </a>
           </div>
           <div class="contact-item">
-            <i class="fas fa-map-marker-alt"></i>
-            <h3>Lokasi</h3>
-            <p>Labuhanbatu, Indonesia</p>
+            <a href="https://wa.me/6281278623036?text=Halo%20Rizkysln%2C%20saya%20melihat%20website%20Anda">
+              <i class="fab fa-whatsapp"></i>
+              <h3>WhatsApp</h3>
+              Chat via WhatsApp
+            </a>
           </div>
         </div>
       </div>
@@ -657,7 +738,7 @@
   <!-- Footer -->
   <footer>
     <p>© 2026 Rizkysln | Built with passion for technology 🚀</p>
-    <p>Dibuat dengan <i class="fas fa-heart" style="color: #ff6b6b;"></i> menggunakan HTML, CSS & JavaScript</p>
+    <p>Dibuat dengan sepenuh hati seperti Malika <i class="fas fa-heart" style="color: #ff6b6b;"></i></p>
   </footer>
 
   <!-- Scroll to Top Button -->
@@ -746,357 +827,12 @@
     document.addEventListener('click', (e) => {
       const navMenu = document.getElementById('navMenu');
       const menuToggle = document.querySelector('.menu-toggle');
-      
+
       if (!navMenu.contains(e.target) && !menuToggle.contains(e.target)) {
         navMenu.classList.remove('active');
       }
     });
   </script>
 </body>
+
 </html>
-<!--
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SELOW KOPI - Selow Aja, Ngopi Dulu</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background: linear-gradient(135deg, #f5f1ea 0%, #ede6db 100%);
-            color: #3d2f26;
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        /* Hero Section */
-        .hero {
-            min-height: 85vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 20px;
-            background: linear-gradient(180deg, #6b4f3e 0%, #8b6f5c 100%);
-            color: #fff;
-            position: relative;
-        }
-
-        .hero::before {
-            content: '☕';
-            position: absolute;
-            font-size: 180px;
-            opacity: 0.1;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 1;
-        }
-
-        .logo {
-            font-size: 2.2em;
-            font-weight: 800;
-            letter-spacing: 2px;
-            margin-bottom: 12px;
-            text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
-        }
-
-        .tagline {
-            font-size: 1.5em;
-            font-weight: 300;
-            margin-bottom: 16px;
-            opacity: 0.95;
-        }
-
-        .subtitle {
-            font-size: 0.95em;
-            opacity: 0.85;
-            margin-bottom: 40px;
-            line-height: 1.8;
-        }
-
-        .cta-button {
-            display: block;
-            width: 100%;
-            max-width: 400px;
-            margin: 0 auto;
-            padding: 18px 32px;
-            background: #25D366;
-            color: white;
-            text-decoration: none;
-            border-radius: 50px;
-            font-size: 1.1em;
-            font-weight: 600;
-            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
-            transition: all 0.3s ease;
-        }
-
-        .cta-button:active {
-            transform: scale(0.98);
-            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
-        }
-
-        /* Menu Section */
-        .menu-section {
-            padding: 48px 20px;
-            max-width: 500px;
-            margin: 0 auto;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 1.8em;
-            font-weight: 700;
-            margin-bottom: 32px;
-            color: #6b4f3e;
-        }
-
-        .menu-card {
-            background: white;
-            border-radius: 20px;
-            padding: 24px;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-            transition: transform 0.2s ease;
-        }
-
-        .menu-card:active {
-            transform: scale(0.98);
-        }
-
-        .menu-name {
-            font-size: 1.3em;
-            font-weight: 700;
-            color: #6b4f3e;
-            margin-bottom: 8px;
-        }
-
-        .menu-details {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 0.95em;
-            color: #8b6f5c;
-        }
-
-        .menu-size {
-            opacity: 0.8;
-        }
-
-        .menu-price {
-            font-weight: 700;
-            font-size: 1.1em;
-            color: #6b4f3e;
-        }
-
-        /* Value Section */
-        .value-section {
-            background: white;
-            padding: 48px 20px;
-            text-align: center;
-        }
-
-        .value-grid {
-            max-width: 500px;
-            margin: 32px auto 0;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
-
-        .value-item {
-            padding: 20px;
-            background: linear-gradient(135deg, #f5f1ea 0%, #ede6db 100%);
-            border-radius: 16px;
-            font-size: 0.9em;
-        }
-
-        .value-icon {
-            font-size: 2em;
-            margin-bottom: 8px;
-        }
-
-        .value-text {
-            font-weight: 600;
-            color: #6b4f3e;
-        }
-
-        /* Order Section */
-        .order-section {
-            padding: 48px 20px;
-            max-width: 500px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .order-text {
-            font-size: 1.1em;
-            color: #6b4f3e;
-            margin-bottom: 24px;
-            line-height: 1.8;
-        }
-
-        /* Footer */
-        .footer {
-            background: #6b4f3e;
-            color: white;
-            padding: 32px 20px;
-            text-align: center;
-        }
-
-        .footer-info {
-            margin-bottom: 20px;
-            line-height: 1.8;
-            opacity: 0.9;
-        }
-
-        .footer-info strong {
-            display: block;
-            margin-bottom: 4px;
-            font-size: 1.05em;
-        }
-
-        .social-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            color: white;
-            text-decoration: none;
-            background: rgba(255,255,255,0.1);
-            padding: 12px 24px;
-            border-radius: 30px;
-            font-size: 0.95em;
-            transition: background 0.3s ease;
-        }
-
-        .social-link:active {
-            background: rgba(255,255,255,0.2);
-        }
-
-        /* Accent Details */
-        .ice-accent {
-            width: 60px;
-            height: 3px;
-            background: linear-gradient(90deg, transparent, #a8d5e2, transparent);
-            margin: 16px auto;
-            border-radius: 2px;
-        }
-    </style>
-</head>
-<body>
-    <!-- Hero Section 
-    <section class="hero">
-        <div class="hero-content">
-            <div class="logo">SELOW KOPI</div>
-            <div class="ice-accent"></div>
-            <h1 class="tagline">Selow Aja, Ngopi Dulu</h1>
-            <p class="subtitle">
-                Kopi Susu Gula Aren · Sanger<br>
-                Taro · Cokelat
-            </p>
-            <a href="https://wa.me/6281278623036?text=Halo%20Selow%20Kopi,%20mau%20pesan%20dong!" class="cta-button">
-                💬 Pesan via WhatsApp
-            </a>
-        </div>
-    </section>
-
-    <!-- Menu Section 
-    <section class="menu-section">
-        <h2 class="section-title">Menu Kami</h2>
-        
-        <div class="menu-card">
-            <div class="menu-name">Kopi Susu Gula Aren</div>
-            <div class="menu-details">
-                <span class="menu-size">14 oz</span>
-                <span class="menu-price">Rp 12.000</span>
-            </div>
-        </div>
-
-        <div class="menu-card">
-            <div class="menu-name">Sanger</div>
-            <div class="menu-details">
-                <span class="menu-size">14 oz</span>
-                <span class="menu-price">Rp 10.000</span>
-            </div>
-        </div>
-
-        <div class="menu-card">
-            <div class="menu-name">Taro</div>
-            <div class="menu-details">
-                <span class="menu-size">14 oz</span>
-                <span class="menu-price">Rp 12.000</span>
-            </div>
-        </div>
-
-        <div class="menu-card">
-            <div class="menu-name">Cokelat</div>
-            <div class="menu-details">
-                <span class="menu-size">14 oz</span>
-                <span class="menu-price">Rp 12.000</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- Value Section 
-    <section class="value-section">
-        <h2 class="section-title">Kenapa SELOW KOPI?</h2>
-        <div class="value-grid">
-            <div class="value-item">
-                <div class="value-icon">✨</div>
-                <div class="value-text">Fresh Setiap Pesanan</div>
-            </div>
-            <div class="value-item">
-                <div class="value-icon">👌</div>
-                <div class="value-text">Rasa Konsisten</div>
-            </div>
-            <div class="value-item">
-                <div class="value-icon">🥤</div>
-                <div class="value-text">Ukuran Puas 14oz</div>
-            </div>
-            <div class="value-item">
-                <div class="value-icon">💰</div>
-                <div class="value-text">Harga Ramah</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Order Section 
-    <section class="order-section">
-        <h2 class="section-title">Yuk, Pesan Sekarang!</h2>
-        <p class="order-text">
-            Tinggal klik tombol di bawah, chat kami di WhatsApp, 
-            dan nikmati kopimu. Selow aja, pasti direspon! 😊
-        </p>
-        <a href="https://wa.me/6281278623036?text=Halo%20Selow%20Kopi,%20mau%20pesan%20dong!" class="cta-button">
-            💬 Chat WhatsApp
-        </a>
-    </section>
-
-    <!-- Footer 
-    <footer class="footer">
-        <div class="footer-info">
-            <strong>📍 Pekan Bahapal, Sumut</strong>
-            <strong>🕐 Setiap Hari, 09.00 - 21.00</strong>
-        </div>
-        <a href="https://www.instagram.com/rizkysln_" class="social-link">
-            📷 Follow Instagram
-        </a>
-        <div style="margin-top: 24px; opacity: 0.7; font-size: 0.85em;">
-            © 2025 SELOW KOPI
-        </div>
-    </footer>
-</body>
-</html>
--->
